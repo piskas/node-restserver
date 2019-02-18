@@ -16,7 +16,7 @@ app.use(require('./routes/usuario'));
 
 
 // MONGOOSE
-mongoose.connect(`${process.env.URL_DB}/cafe`, { useNewUrlParser: true }, (err, res) => {
+mongoose.connect(process.env.URL_DB, { useNewUrlParser: true }, (err, res) => {
     if (err) throw err;
     console.log('Base de datos ONLINE');
 });
