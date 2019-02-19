@@ -11,11 +11,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// SERVICIOS: USUARIO
-app.use(require('./routes/usuario'));
+// Copnfiguracion Global de Rutas
+app.use(require('./routes/index'));
 
 
-// MONGOOSE
+// MONGOOSE - MongoDB
 mongoose.connect(process.env.URL_DB, { useNewUrlParser: true }, (err, res) => {
     if (err) throw err;
     console.log('Base de datos ONLINE');
