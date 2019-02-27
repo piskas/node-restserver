@@ -21,7 +21,10 @@ app.use(require('./routes/index'));
 
 
 // MONGOOSE - MongoDB
-mongoose.connect(process.env.URL_DB, { useNewUrlParser: true }, (err, res) => {
+mongoose.connect(process.env.URL_DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true // por error de DEPRECATE de unique
+}, (err, res) => {
     if (err) throw err;
     console.log('Base de datos ONLINE');
 });
