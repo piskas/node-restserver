@@ -19,3 +19,7 @@ process.env.EXPIRES_IN = '1h';
 
 // Seed de Autenticacion
 process.env.KEY = process.env.KEY || 'KEY_DEV';
+
+
+// Google Client ID
+process.env.GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '933801671793-i4700ktbukqk666r9h0vmaifhal0m6a4.apps.googleusercontent.com';

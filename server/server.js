@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
 
 
 // BODY-PARSER
@@ -11,7 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// Copnfiguracion Global de Rutas
+// Habilitar /Public
+app.use(express.static(path.resolve(__dirname, "../public")));
+
+
+// Configuracion Global de Rutas
 app.use(require('./routes/index'));
 
 
